@@ -13,7 +13,7 @@ namespace GIK299_Projekt
         internal static void MainMenu()
         {
             bool loopMainMenu = true;
-            //while (loopMainMenu)
+            while (loopMainMenu)
             {
                 Console.WriteLine(
                     "Huvudmeny:" +
@@ -22,6 +22,7 @@ namespace GIK299_Projekt
                     "\n 1. Längd" +
                     "\n 2. Temperatur" +
                     "\n 3. Vikt" +
+                    "\n 4. Avsluta programmet" +
                     "\n------------------------------");
 
                 var userInput = Console.ReadLine();
@@ -44,6 +45,16 @@ namespace GIK299_Projekt
                             //SubMenuWeight();
                         }
                         break;
+
+                        case "4":
+                        {
+                            loopMainMenu = false;
+                        }break;
+
+                    default:
+                        {
+                            Console.WriteLine("Du kan endast välja ett tal mellan 1-4");
+                        }break;
                 }
             }
         }

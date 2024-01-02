@@ -11,8 +11,7 @@ namespace GIK299_Projekt
     {
         internal static void CalcMiles()
         {
-            Console.WriteLine("Konvertering mellan miles och kilometer");
-            Console.Write("Ange längd: ");
+            string userInput = "";
             double calcMilesInputValue = 0;
             bool calcMilesParse = false;
             bool calcMilesLoop = true;
@@ -21,19 +20,45 @@ namespace GIK299_Projekt
 
             while (calcMilesLoop)
             {
-                calcMilesParse = double.TryParse(Console.ReadLine(), out calcMilesInputValue);
-                if (calcMilesParse == false || calcMilesInputValue == 0 || calcMilesInputValue < 0)
+                Console.WriteLine("Konvertering mellan Miles och kilometer, skriv X för att avsluta");
+                Console.Write("Ange längd: ");
+
+                userInput = Console.ReadLine();
+                if (userInput.ToUpper() == "X")
                 {
-                    Console.WriteLine("Vänligen kontrollera inmatat värde, kan endast vara positiva tal.");
-                }
-                else
-                {
-                    calcMilesLoop = false;
+                    Menu.SubMenuLength();
                 }
 
-                Console.WriteLine($"{calcMilesInputValue} miles är {calcMilesInputValue * milesToKilometers} kilometer" +
-                    $"\n{calcMilesInputValue} kilometer är {calcMilesInputValue * kilometersToMiles} miles");
-                Menu.SubMenuLength();
+                else
+                {
+                    calcMilesParse = double.TryParse(userInput, out calcMilesInputValue);
+                    if (calcMilesParse == false) 
+                    {
+                        Console.WriteLine("Det går endast att ange numeriska värden.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"\n" +
+                            $"Konvertering mellan Miles och kilometer \n" +
+                            $"{calcMilesInputValue} Miles är {String.Format("{0:0.##}", calcMilesInputValue * milesToKilometers)} Kilometer \n" +
+                            $"{calcMilesInputValue} Kilometer är {String.Format("{0:0.##}", calcMilesInputValue * kilometersToMiles)} Miles \n" +
+                            $"");
+                    }
+                }
+
+                //calcMilesParse = double.TryParse(Console.ReadLine(), out calcMilesInputValue);
+                //if (calcMilesParse == false)
+                //{
+                //    Console.WriteLine("Det går endast att ange numeriska värden");
+                //}
+                //else
+                //{
+                //    calcMilesLoop = false;
+                //}
+
+                //Console.WriteLine($"{calcMilesInputValue} miles är {calcMilesInputValue * milesToKilometers} kilometer" +
+                //    $"\n{calcMilesInputValue} kilometer är {calcMilesInputValue * kilometersToMiles} miles");
+                //Menu.SubMenuLength();
             }
         }
 
