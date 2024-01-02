@@ -61,51 +61,66 @@ namespace GIK299_Projekt
 
         internal static void SubMenuLength()
         {
-            Console.WriteLine("Konvertering av längd" +
-                "\n------------------------------" +
-                "\n1. Konvertering miles/kilometer" +
-                "\n2. Konvertering yard/meter" +
-                "\n3. Konvertering foot/centimeter" +
-                "\n4. Konvertering inches/centimeter" +
-                "\n5. Tillbaka till huvudmenyn" +
-                "\n------------------------------");
+            bool lengthMenuLoop = true;
+            bool lengthMenuParse = false;
+            string userInput = "";
+            int menuChoice = 0;
 
-            var subMenuLengthUserInput = Console.ReadLine();
-            switch (subMenuLengthUserInput)
+            while (lengthMenuLoop)
             {
-                case "1":
-                    {
-                        CalcLength.CalcMiles();
-                    }
-                    break;
+                Console.WriteLine("Konvertering av längd" +
+                    "\n------------------------------" +
+                    "\n1. Konvertering miles/kilometer" +
+                    "\n2. Konvertering yard/meter" +
+                    "\n3. Konvertering foot/decimeter" +
+                    "\n4. Konvertering inches/centimeter" +
+                    "\n5. Tillbaka till huvudmenyn" +
+                    "\n------------------------------");
 
-                case "2":
-                    {
-                        CalcLength.CalcYards();
 
-                    }
-                    break;
-                case "3":
-                    {
-                        CalcLength.CalcFoots();
-                    }
-                    break;
-                case "4":
-                    {
-                        CalcLength.CalcInches();
-                    }
-                    break;
-                case "5":
-                    {
-                        MainMenu();
-                    }
-                    break;
+                userInput = Console.ReadLine();
 
-                default:
+                lengthMenuParse = int.TryParse(userInput, out menuChoice);
+
+                if (lengthMenuParse = false || menuChoice == 0 || menuChoice < 0 || menuChoice > 5)
+                {
+                    Console.WriteLine("Felaktigt val ange en siffra mellan 1-5");
+                }
+
+                else
+                {
+
+                    switch (menuChoice)
                     {
-                        Console.WriteLine("Felaktigt val ange en siffra mellan 1-5");
+                        case 1:
+                            {
+                                CalcLength.CalcMiles();
+                            }
+                            break;
+
+                        case 2:
+                            {
+                                CalcLength.CalcYards();
+
+                            }
+                            break;
+                        case 3:
+                            {
+                                CalcLength.CalcFoots();
+                            }
+                            break;
+                        case 4:
+                            {
+                                CalcLength.CalcInches();
+                            }
+                            break;
+                        case 5:
+                            {
+                                MainMenu();
+                            }
+                            break;
                     }
-                    break;
+                }
             }
         }
         internal static void SubMenuTemp()
