@@ -37,7 +37,7 @@ namespace GIK299_Projekt
             }
         }
 
-        static void SubMenuLength()
+        internal static void SubMenuLength()
         {
             Console.WriteLine("Konvertering av längd" +
                 "\n------------------------------" +
@@ -53,24 +53,24 @@ namespace GIK299_Projekt
             {
                 case "1":
                     {
-                        calcMiles();
+                        CalcLength.CalcMiles();
                     }
                     break;
 
                 case "2":
                     {
-                        calcYards();
+                        CalcLength.CalcYards();
 
                     }
                     break;
                 case "3":
                     {
-                        //calcFoots();
+                        CalcLength.CalcFoots();
                     }
                     break;
                 case "4":
                     {
-                        //calcInches();
+                        CalcLength.CalcInches();
                     }
                     break;
                 case "5":
@@ -86,40 +86,5 @@ namespace GIK299_Projekt
                     break;
             }
         }
-
-        static void calcMiles()
-        {
-            Console.WriteLine("Räkna ut miles");
-        }
-
-        static void calcYards()
-        {
-            Console.WriteLine("Konvertering mellan yards och meter");
-            Console.Write("Ange längd:");
-            double calcYardsInputValue = 0;
-            bool calcYardsParse = false;
-            bool calcYardsLoop = true;
-            double yardToMeter = 0.9144;
-            double MeterToYard = 1.094;
-                while (calcYardsLoop)
-            {
-                calcYardsParse = double.TryParse(Console.ReadLine(), out calcYardsInputValue);
-                if (calcYardsParse == false || calcYardsInputValue == 0 || calcYardsInputValue < 0)
-                {
-                    Console.WriteLine("Vänligen kontrollera inmatat värde, kan endast vara positiva tal.");
-                }
-                else
-                {
-                    calcYardsLoop = false;
-                }
-
-                Console.WriteLine($"{calcYardsInputValue} yards är {calcYardsInputValue*yardToMeter} meter" +
-                    $"\n{calcYardsInputValue} meter är {calcYardsInputValue*MeterToYard} yards");
-
-            }
-            
-            
-        }
-
     }
 }
