@@ -33,6 +33,17 @@ namespace GIK299_Projekt
                             SubMenuLength();
                         }
                         break;
+
+                    case "2":
+                        {
+                            SubMenuTemp();
+                        }
+                        break;
+                    case "3":
+                        {
+                            //SubMenuWeight();
+                        }
+                        break;
                 }
             }
         }
@@ -85,6 +96,10 @@ namespace GIK299_Projekt
                     }
                     break;
             }
+        }
+        internal static void SubMenuTemp()
+        {
+            CalcTemperature.CalcTemp();
         }
     }
 }
