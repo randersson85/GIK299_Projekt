@@ -12,7 +12,7 @@ namespace GIK299_Projekt
         internal WriteToFile (string result)
         {
             Result = result;
-
+            //Lägger filen i samma mapp som cs-filerna.
             string path = "../../../logFile.txt";
             using StreamWriter sw = File.AppendText (path);
             sw.WriteLine (DateTime.Now +"\n" + result + "\n");

@@ -26,7 +26,7 @@ namespace GIK299_Projekt
                 userInput = Console.ReadLine();
                 if (userInput.ToUpper() == "X")
                 {
-                    calcMilesLoop = false;
+                    break;
                 }
 
                 else
@@ -38,13 +38,14 @@ namespace GIK299_Projekt
                     }
                     else
                     {
-                        Console.WriteLine($"\n" +
-                            $"Konvertering mellan Miles och kilometer \n" +
+
+                        string result = $"Konvertering mellan Miles och kilometer \n" +
                             $"{calcMilesInputValue} Miles är {String.Format("{0:0.##}", calcMilesInputValue * milesToKilometers)} Kilometer \n" +
-                            $"{calcMilesInputValue} Kilometer är {String.Format("{0:0.##}", calcMilesInputValue * kilometersToMiles)} Miles \n");
-                            
-                        WriteToFile logFile = new WriteToFile($"{calcMilesInputValue} Miles är {String.Format("{0:0.##}", calcMilesInputValue * milesToKilometers)} Kilometer \n" +
-                            $"{calcMilesInputValue} Kilometer är {String.Format("{0:0.##}", calcMilesInputValue * kilometersToMiles)} Miles \n" );
+                            $"{calcMilesInputValue} Kilometer är {String.Format("{0:0.##}", calcMilesInputValue * kilometersToMiles)} Miles";
+
+                        Console.WriteLine(result);
+                        WriteToFile logFile = new WriteToFile(result);
+
                     }
                 }
             }
@@ -69,7 +70,7 @@ namespace GIK299_Projekt
                 userInput = Console.ReadLine();
                 if (userInput.ToUpper() == "X")
                 {
-                    calcYardsLoop= false;
+                    break;
                 }
                 else
                 {
@@ -81,12 +82,12 @@ namespace GIK299_Projekt
                 }
                 else
                 {
-                    Console.WriteLine($"\nKonvertering mellan Yards och Meter \n" +
-                        $"{calcYardsInputValue} Yards är: {String.Format("{0:0.##}", calcYardsInputValue * yardToMeter)} Meter" +
-                        $"{calcYardsInputValue} Meter är {String.Format("{0:0.##}", calcYardsInputValue * MeterToYard)} Yards"); 
+                    string result = $"Konvertering mellan Yards och Meter \n" +
+                        $"{calcYardsInputValue} Yards är: {String.Format("{0:0.##}", calcYardsInputValue * yardToMeter)} Meter \n" +
+                        $"{calcYardsInputValue} Meter är {String.Format("{0:0.##}", calcYardsInputValue * MeterToYard)} Yards";
 
-                    WriteToFile logFile = new WriteToFile($"{calcYardsInputValue} Yards är: {String.Format("{0:0.##}", calcYardsInputValue * yardToMeter)} Meter\n" +
-                        $"{calcYardsInputValue} Meter är {String.Format("{0:0.##}", calcYardsInputValue * MeterToYard)} Yards\n");
+                    Console.WriteLine(result);
+                    WriteToFile logFile = new WriteToFile(result);
                 }
             }
         }
@@ -105,9 +106,9 @@ namespace GIK299_Projekt
                 Console.Write("Ange längd: ");
                 userInput = Console.ReadLine();
 
-                if (userInput.ToUpper() == "X") 
+                if (userInput.ToUpper() == "X")
                 {
-                    calcFootLoop = false;
+                    break;
                 }
                 else
                 {
@@ -118,14 +119,12 @@ namespace GIK299_Projekt
                     }
                     else
                     {
-                        Console.WriteLine($"\n" +
-                            $"Konvertering mellan foot och decimeter \n" +
+                        string result = $"Konvertering mellan Foot och Decimeter \n" +
                             $"{calcFootInputValue} Foot är: {String.Format("{0:0.##}", calcFootInputValue * footToDecimeter)} Decimeter \n" +
-                            $"{calcFootInputValue} Decimeter är: {String.Format("{0:0.##}", calcFootInputValue * decimeterToFoot)} Foot");
+                            $"{calcFootInputValue} Decimeter är: {String.Format("{0:0.##}", calcFootInputValue * decimeterToFoot)} Foot";
 
-                        WriteToFile logFile = new WriteToFile($"{calcFootInputValue} Foot är: {String.Format("{0:0.##}", calcFootInputValue * footToDecimeter)} Decimeter \n" +
-                                                                $"{calcFootInputValue} Decimeter är: {String.Format("{0:0.##}", calcFootInputValue * decimeterToFoot)} Foot\n");
-                            
+                        Console.WriteLine(result);
+                        WriteToFile logFile = new WriteToFile(result);
                     }
                 }
             }
@@ -146,7 +145,7 @@ namespace GIK299_Projekt
                 userInput = Console.ReadLine();
                 if (userInput.ToUpper() == "X")
                 {
-                    calcInchLoop= false;
+                    break;
                 }
                 else
                 {
@@ -157,13 +156,13 @@ namespace GIK299_Projekt
                     }
                     else
                     {
-                        Console.WriteLine($"\n" +
-                            $"Konvertering mellan inches och centimeter \n" +
-                            $"{calcInchInputValue} Inches är: {String.Format("{0:0.##}", calcInchInputValue * inchToCentimeter)} Centimeter \n" +
-                            $"{calcInchInputValue} Centimeter är: {String.Format("{0:0.##}", calcInchInputValue * centimeterToInch)}  Inches\n");
+                        string result = $"Konvertering mellan Inches och Centimeter \n" +
 
-                        WriteToFile logFile = new WriteToFile($"{calcInchInputValue} Inches är: {String.Format("{0:0.##}", calcInchInputValue * inchToCentimeter)} Centimeter \n" +
-                            $"{calcInchInputValue} Centimeter är: {String.Format("{0:0.##}", calcInchInputValue * centimeterToInch)}  Inches\n");
+                            $"{calcInchInputValue} Inches är: {String.Format("{0:0.##}", calcInchInputValue * inchToCentimeter)} Centimeter \n" +
+                            $"{calcInchInputValue} Centimeter är: {String.Format("{0:0.##}", calcInchInputValue * centimeterToInch)}  Inches\n";
+
+                        Console.WriteLine(result);
+                        WriteToFile logFile = new WriteToFile(result);
                     }
                 }
 

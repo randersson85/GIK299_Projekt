@@ -25,7 +25,7 @@ namespace GIK299_Projekt
 
                 if (userInput.ToUpper() == "X")
                 {
-                    calcPoundLoop=false;
+                    break;
                 }
                 else
                 {
@@ -36,19 +36,19 @@ namespace GIK299_Projekt
                     }
                     else
                     {
-                        Console.WriteLine($"\n" +
-                            $"Konvertering mellan foot och decimeter \n" +
+                        string result = $"Konvertering mellan Pounds och Kilo \n" +
                             $"{calcPoundInputValue} Pounds är: {String.Format("{0:0.##}", calcPoundInputValue * poundToKilo)} Kilo \n" +
-                            $"{calcPoundInputValue} Kilo är: {String.Format("{0:0.##}", calcPoundInputValue * kiloToPound)} Pound");
+                            $"{calcPoundInputValue} Kilo är: {String.Format("{0:0.##}", calcPoundInputValue * kiloToPound)} Pound";
 
-                        WriteToFile logFile = new WriteToFile($"{calcPoundInputValue} Pounds är: {String.Format("{0:0.##}", calcPoundInputValue * poundToKilo)} Kilo \n" +
-                            $"{calcPoundInputValue} Kilo är: {String.Format("{0:0.##}", calcPoundInputValue * kiloToPound)} Pound");
+                        Console.WriteLine(result);
+                        WriteToFile logFile = new WriteToFile(result);
+
                     }
                 }
             }
-        }
 
-        internal static void CalcOunces()
+
+        }  internal static void CalcOunces()
         {
             string userInput = "";
             double calcOuncesInputValue = 0;
@@ -65,7 +65,7 @@ namespace GIK299_Projekt
 
                 if (userInput.ToUpper() == "X")
                 {
-                    calcOuncesLoop=false;
+                    break;
                 }
                 else
                 {
@@ -76,13 +76,11 @@ namespace GIK299_Projekt
                     }
                     else
                     {
-                        Console.WriteLine($"\n" +
-                            $"Konvertering mellan foot och decimeter \n" +
+                            string result = $"Konvertering mellan Ounces och Gram \n" +
                             $"{calcOuncesInputValue} Ounces är: {String.Format("{0:0.##}", calcOuncesInputValue * ouncesTogram)} gram \n" +
-                            $"{calcOuncesInputValue} gram är: {String.Format("{0:0.##}", calcOuncesInputValue * gramToOunces)} Ounces");
+                            $"{calcOuncesInputValue} gram är: {String.Format("{0:0.##}", calcOuncesInputValue * gramToOunces)} Ounces" ;
 
-                          WriteToFile logFile = new WriteToFile($"{calcOuncesInputValue} Ounces är: {String.Format("{0:0.##}", calcOuncesInputValue * ouncesTogram)} gram \n" +
-                            $"{calcOuncesInputValue} gram är: {String.Format("{0:0.##}", calcOuncesInputValue * gramToOunces)} Ounces");
+                          
                     }
                 }
             }
