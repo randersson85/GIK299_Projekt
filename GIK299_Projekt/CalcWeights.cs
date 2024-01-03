@@ -80,7 +80,8 @@ namespace GIK299_Projekt
                             $"{calcOuncesInputValue} Ounces är: {String.Format("{0:0.##}", calcOuncesInputValue * ouncesTogram)} gram \n" +
                             $"{calcOuncesInputValue} gram är: {String.Format("{0:0.##}", calcOuncesInputValue * gramToOunces)} Ounces" ;
 
-                          
+                        Console.WriteLine(result);
+                        WriteToFile logFile = new WriteToFile(result);
                     }
                 }
             }

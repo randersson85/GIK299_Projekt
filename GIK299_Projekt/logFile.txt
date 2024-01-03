@@ -1,0 +1,65 @@
+2024-01-03 14:12:54
+Konvertering mellan Miles och kilometer 
+1 Miles är 1,61 Kilometer 
+1 Kilometer är 0,62 Miles
+
+2024-01-03 14:13:07
+Konvertering mellan Yards och Meter 
+12 Yards är: 10,97 Meter 
+12 Meter är 13,13 Yards
+
+2024-01-03 14:13:19
+Konvertering mellan Foot och Decimeter 
+31 Foot är: 94,49 Decimeter 
+31 Decimeter är: 10,17 Foot
+
+2024-01-03 14:13:31
+Konvertering mellan Inches och Centimeter 
+45 Inches är: 114,3 Centimeter 
+45 Centimeter är: 17,72  Inches
+
+
+2024-01-03 14:13:43
+Konvertering mellan Inches och Centimeter 
+0,1 Inches är: 0,25 Centimeter 
+0,1 Centimeter är: 0,04  Inches
+
+
+2024-01-03 14:14:08
+Konvertering mellan Celcius,Fahrenheit och Kelvin 
+-50 Celcius är -58 Fahrenheit 
+-50 Celcius är 223,15 Kelvin 
+
+Konvertering från Fahrenheit 
+-50 Fahrenheit är -45,56 Celcius 
+-50 Fahrenheit är 227,59 Kelvin 
+
+Konvertering från Kelvin 
+-50 Kelvin är -323,15 Celcius 
+-50 Kelvin är -549,67 Fahrenheit 
+
+
+2024-01-03 14:14:21
+Konvertering mellan Celcius,Fahrenheit och Kelvin 
+-40 Celcius är -40 Fahrenheit 
+-40 Celcius är 233,15 Kelvin 
+
+Konvertering från Fahrenheit 
+-40 Fahrenheit är -40 Celcius 
+-40 Fahrenheit är 233,15 Kelvin 
+
+Konvertering från Kelvin 
+-40 Kelvin är -313,15 Celcius 
+-40 Kelvin är -531,67 Fahrenheit 
+
+
+2024-01-03 14:15:19
+Konvertering mellan Pounds och Kilo 
+12 Pounds är: 5,44 Kilo 
+12 Kilo är: 26,46 Pound
+
+2024-01-03 14:18:02
+Konvertering mellan Ounces och Gram 
+12 Ounces är: 340,2 gram 
+12 gram är: 0,42 Ounces
+
