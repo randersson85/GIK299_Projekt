@@ -23,7 +23,7 @@ namespace GIK299_Projekt
                 userInput = Console.ReadLine();
                 if (userInput.ToUpper() == "X")
                 {
-                    Menu.MainMenu();
+                    temperatureLoop = false;
                 }
 
                 else
@@ -41,6 +41,17 @@ namespace GIK299_Projekt
 
 
                             $"{temperatureInputValue} Celcius är {String.Format("{0:0.##}", (temperatureInputValue * 1.8) + 32)} Fahrenheit \n" +
+                            $"{temperatureInputValue} Celcius är {String.Format("{0:0.##}", temperatureInputValue + 273.15)} Kelvin \n" +
+                            $"\n" +
+                            $"Konvertering från Fahrenheit \n" +
+                            $"{temperatureInputValue} Fahrenheit är {String.Format("{0:0.##}", (temperatureInputValue - 32) / 1.8)} Celcius \n" +
+                            $"{temperatureInputValue} Fahrenheit är {String.Format("{0:0.##}", (temperatureInputValue + 459.67) / 1.8)} Kelvin \n" +
+                            $"\n" +
+                            $"Konvertering från Kelvin \n" +
+                            $"{temperatureInputValue} Kelvin är {String.Format("{0:0.##}", temperatureInputValue - 273.15)} Celcius \n" +
+                            $"{temperatureInputValue} Kelvin är {String.Format("{0:0.##}", (temperatureInputValue * 1.8) - 459.67)} Fahrenheit \n");
+
+                        WriteToFile logFile = new WriteToFile($"{temperatureInputValue} Celcius är {String.Format("{0:0.##}", (temperatureInputValue * 1.8) + 32)} Fahrenheit \n" +
                             $"{temperatureInputValue} Celcius är {String.Format("{0:0.##}", temperatureInputValue + 273.15)} Kelvin \n" +
                             $"\n" +
                             $"Konvertering från Fahrenheit \n" +

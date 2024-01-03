@@ -26,35 +26,44 @@ namespace GIK299_Projekt
                     "\n------------------------------");
 
                 var userInput = Console.ReadLine();
-                switch (userInput)
+                int mainMenuChoice = 0;
+                bool menuChoiceParse = false;
+                menuChoiceParse = int.TryParse(userInput, out mainMenuChoice);
+                if (menuChoiceParse = false || mainMenuChoice == 0 || mainMenuChoice < 0 || mainMenuChoice > 4) {
+
+                    Console.WriteLine("Du kan endast ange numeriska värden mellan 1-4");
+                }
+                switch (mainMenuChoice)
                 {
 
-                    case "1":
+                    case 1:
                         {
                             SubMenuLength();
                         }
                         break;
 
-                    case "2":
+                    case 2:
                         {
                             SubMenuTemp();
                         }
                         break;
-                    case "3":
+                    case 3:
                         {
-                            //SubMenuWeight();
+                            SubMenuWeight();
                         }
                         break;
 
-                        case "4":
+                    case 4:
                         {
                             loopMainMenu = false;
-                        }break;
+                        }
+                        break;
 
                     default:
                         {
                             Console.WriteLine("Du kan endast välja ett tal mellan 1-4");
-                        }break;
+                        }
+                        break;
                 }
             }
         }
@@ -116,7 +125,8 @@ namespace GIK299_Projekt
                             break;
                         case 5:
                             {
-                                MainMenu();
+                                lengthMenuLoop = false;
+                                break;
                             }
                             break;
                     }
@@ -126,6 +136,60 @@ namespace GIK299_Projekt
         internal static void SubMenuTemp()
         {
             CalcTemperature.CalcTemp();
+        }
+
+        internal static void SubMenuWeight()
+        {
+            bool weightMenuLoop = true;
+            bool weightMenuParse = false;
+            string userInput = "";
+            int menuChoice = 0;
+
+            while (weightMenuLoop)
+            {
+                Console.WriteLine("Konvertering av vikt" +
+                    "\n------------------------------" +
+                    "\n1. Konvertering pounds/kilo" +
+                    "\n2. Konvertering ounces/gram" +
+                    "\n3. Tillbaka till huvudmenyn" +
+                    "\n------------------------------");
+
+
+                userInput = Console.ReadLine();
+
+                weightMenuLoop = int.TryParse(userInput, out menuChoice);
+
+                if (weightMenuLoop = false || menuChoice == 0 || menuChoice < 0 || menuChoice > 3)
+                {
+                    Console.WriteLine("Felaktigt val ange en siffra mellan 1-3");
+                }
+
+                else
+                {
+
+                    switch (menuChoice)
+                    {
+                        case 1:
+                            {
+                                CalcWeights.CalcPound();
+                            }
+                            break;
+
+                        case 2:
+                            {
+                                CalcWeights.CalcOunces();
+
+                            }
+                            break;
+
+                        case 3:
+                            {
+                                MainMenu();
+                            }
+                            break;
+                    }
+                }
+            }
         }
     }
 }
