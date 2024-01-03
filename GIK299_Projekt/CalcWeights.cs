@@ -30,9 +30,9 @@ namespace GIK299_Projekt
                 else
                 {
                     calcPoundParse = double.TryParse(userInput, out calcPoundInputValue);
-                    if (calcPoundParse == false)
+                    if (calcPoundParse == false || calcPoundInputValue == 0 || calcPoundInputValue < 0 )
                     {
-                        Console.WriteLine("Det går endast att ange numeriska värden");
+                        Console.WriteLine("Det går endast att ange positiva numeriska värden.");
                     }
                     else
                     {
@@ -70,9 +70,9 @@ namespace GIK299_Projekt
                 else
                 {
                     calcOuncesParse = double.TryParse(userInput, out calcOuncesInputValue);
-                    if (calcOuncesParse == false)
+                    if (calcOuncesParse == false || calcOuncesInputValue == 0 || calcOuncesInputValue < 0)
                     {
-                        Console.WriteLine("Det går endast att ange numeriska värden");
+                        Console.WriteLine("Det går endast att ange positiva numeriska värden.");
                     }
                     else
                     {

@@ -32,9 +32,9 @@ namespace GIK299_Projekt
                 else
                 {
                     calcMilesParse = double.TryParse(userInput, out calcMilesInputValue);
-                    if (calcMilesParse == false)
+                    if (calcMilesParse == false || calcMilesInputValue == 0 || calcMilesInputValue < 0)
                     {
-                        Console.WriteLine("Det går endast att ange numeriska värden.");
+                        Console.WriteLine("Det går endast att ange positiva numeriska värden.");
                     }
                     else
                     {
@@ -76,9 +76,9 @@ namespace GIK299_Projekt
                 {
                     calcYardsParse = double.TryParse(userInput, out calcYardsInputValue);
                 }
-                if (calcYardsParse == false)
+                if (calcYardsParse == false || calcYardsInputValue == 0 || calcYardsInputValue < 0)
                 {
-                    Console.WriteLine("Det går endast att ange numeriska värden.");
+                    Console.WriteLine("Det går endast att ange positiva numeriska värden.");
                 }
                 else
                 {
@@ -113,9 +113,9 @@ namespace GIK299_Projekt
                 else
                 {
                     calcFootParse = double.TryParse(userInput, out calcFootInputValue);
-                    if (calcFootParse == false)
+                    if (calcFootParse == false || calcFootInputValue == 0 || calcFootInputValue < 0)
                     {
-                        Console.WriteLine("Det går endast att ange numeriska värden");
+                        Console.WriteLine("Det går endast att ange positiva numeriska värden.");
                     }
                     else
                     {
@@ -150,9 +150,9 @@ namespace GIK299_Projekt
                 else
                 {
                     calcInchParse = double.TryParse(userInput, out calcInchInputValue);
-                    if (calcInchParse == false)
+                    if (calcInchParse == false || calcInchInputValue == 0 || calcInchInputValue < 0)
                     {
-                        Console.WriteLine("Det går endast att ange numeriska värden.");
+                        Console.WriteLine("Det går endast att ange positiva numeriska värden.");
                     }
                     else
                     {
