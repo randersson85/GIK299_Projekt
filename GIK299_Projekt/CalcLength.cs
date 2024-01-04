@@ -64,7 +64,7 @@ namespace GIK299_Projekt
 
             while (calcYardsLoop)
             {
-                Console.WriteLine("Konvertering mellan yards och meter tryck x för att avsluta");
+                Console.WriteLine("Konvertering mellan yards och meter, tryck x för att avsluta");
                 Console.Write("Ange längd: ");
 
                 userInput = Console.ReadLine();
@@ -102,7 +102,7 @@ namespace GIK299_Projekt
             double decimeterToFoot = 0.3281;
             while (calcFootLoop)
             {
-                Console.WriteLine("Konvertering mellan foot och decimeter");
+                Console.WriteLine("Konvertering mellan foot och decimeter, tryck x för att avsluta");
                 Console.Write("Ange längd: ");
                 userInput = Console.ReadLine();
 
@@ -140,7 +140,7 @@ namespace GIK299_Projekt
             double centimeterToInch = 0.3937;
             while (calcInchLoop)
             {
-                Console.WriteLine("Konvertering mellan inches och centimeter");
+                Console.WriteLine("Konvertering mellan inches och centimeter, tryck x för att avsluta");
                 Console.Write("Ange längd: ");
                 userInput = Console.ReadLine();
                 if (userInput.ToUpper() == "X")

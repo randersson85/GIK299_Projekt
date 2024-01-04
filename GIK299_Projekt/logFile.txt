@@ -63,3 +63,66 @@ Konvertering mellan Ounces och Gram
 12 Ounces är: 340,2 gram 
 12 gram är: 0,42 Ounces
 
+2024-01-04 09:56:26
+Konvertering mellan Inches och Centimeter 
+8 Inches är: 20,32 Centimeter 
+8 Centimeter är: 3,15  Inches
+
+
+2024-01-04 09:56:50
+Konvertering mellan Inches och Centimeter 
+19997 Inches är: 50792,38 Centimeter 
+19997 Centimeter är: 7872,82  Inches
+
+
+2024-01-04 09:56:59
+Konvertering mellan Inches och Centimeter 
+5 Inches är: 12,7 Centimeter 
+5 Centimeter är: 1,97  Inches
+
+
+2024-01-04 09:59:44
+Konvertering mellan Yards och Meter 
+6 Yards är: 5,49 Meter 
+6 Meter är 6,56 Yards
+
+2024-01-04 10:00:06
+Konvertering mellan Foot och Decimeter 
+5 Foot är: 15,24 Decimeter 
+5 Decimeter är: 1,64 Foot
+
+2024-01-04 10:00:20
+Konvertering mellan Foot och Decimeter 
+8 Foot är: 24,38 Decimeter 
+8 Decimeter är: 2,62 Foot
+
+2024-01-04 10:00:27
+Konvertering mellan Inches och Centimeter 
+3 Inches är: 7,62 Centimeter 
+3 Centimeter är: 1,18  Inches
+
+
+2024-01-04 10:00:44
+Konvertering mellan Celcius,Fahrenheit och Kelvin 
+50 Celcius är 122 Fahrenheit 
+50 Celcius är 323,15 Kelvin 
+
+Konvertering från Fahrenheit 
+50 Fahrenheit är 10 Celcius 
+50 Fahrenheit är 283,15 Kelvin 
+
+Konvertering från Kelvin 
+50 Kelvin är -223,15 Celcius 
+50 Kelvin är -369,67 Fahrenheit 
+
+
+2024-01-04 10:01:01
+Konvertering mellan Pounds och Kilo 
+3 Pounds är: 1,36 Kilo 
+3 Kilo är: 6,62 Pound
+
+2024-01-04 10:01:08
+Konvertering mellan Ounces och Gram 
+4 Ounces är: 113,4 gram 
+4 gram är: 0,14 Ounces
+
